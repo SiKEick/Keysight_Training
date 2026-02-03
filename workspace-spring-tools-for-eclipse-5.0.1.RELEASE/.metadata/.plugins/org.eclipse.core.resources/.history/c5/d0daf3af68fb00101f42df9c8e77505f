@@ -1,0 +1,31 @@
+package com.example.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.model.Flight;
+import com.example.service.FlightService;
+
+@Controller
+@RequestMapping("/flights")
+public class FlightController {
+	
+	@Autowired
+	private FlightService flightService;
+	
+	@RequestMapping(value ="/add/flight",method = RequestMethod.POST)
+	public Flight addFlight(@RequestBody Flight flight) {
+		return flightService.addFlight(flight);
+	}
+	
+	
+	@RequestMapping(value ="/getAll",method = RequestMethod.GET)
+	public List<Flight> getAllFlights(){
+		return flightService.getAllFlights();
+	}
+}

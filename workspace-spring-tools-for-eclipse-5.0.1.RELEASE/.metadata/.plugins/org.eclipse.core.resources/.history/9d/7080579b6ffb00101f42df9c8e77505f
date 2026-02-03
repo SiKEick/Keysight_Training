@@ -1,0 +1,27 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.model.Flight;
+import com.example.demo.service.FlightService;
+
+@RestController
+@RequestMapping("/flights")
+public class FlightController {
+
+    @Autowired
+    private FlightService flightService;
+
+    @PostMapping
+    public Flight addFlight(@RequestBody Flight flight) {
+        return flightService.addFlight(flight);
+    }
+
+    @GetMapping("/getAll")
+    public List<Flight> getAllFlights() {
+        return flightService.getAllFlights();
+    }
+}

@@ -1,0 +1,27 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Flight;
+import com.example.demo.repositories.FlightRepository;
+
+@Service
+public class FlightService {
+	
+	private FlightRepository flightrepos;
+	
+	public FlightService(FlightRepository flightrepos) {
+		this.flightrepos = flightrepos;
+	}
+	
+	public Flight addFlight(Flight flight) {
+		return flightrepos.save(flight);
+	}
+	
+	
+	
+}

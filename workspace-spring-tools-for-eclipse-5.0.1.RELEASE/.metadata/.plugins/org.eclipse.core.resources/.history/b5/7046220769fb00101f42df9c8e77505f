@@ -1,0 +1,22 @@
+package com.example.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.model.Flight;
+
+public class FlightService {
+	
+	private List<Flight> flights = new ArrayList<>();
+	
+	public Flight addFlight(Flight flight) {
+		flights.add(flight);
+		return flight;
+	}
+	
+	public List<Flight> getAllFlights() {
+		return flights;
+	}
+	
+	
+}
