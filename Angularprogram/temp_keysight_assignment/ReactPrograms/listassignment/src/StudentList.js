@@ -4,7 +4,7 @@ function StudentList() {
 
   // List of student objects
   const students = [
-    { studid: 1, studname: "Srijan", age: 22, city: "Kolkata" },
+    { studid: 1, studname: "Yash", age: 22, city: "Delhi" },
     { studid: 2, studname: "Riya", age: 22, city: "Mumbai" },
     { studid: 3, studname: "Karan", age: 21, city: "Pune" },
     { studid: 4, studname: "Neha", age: 23, city: "Bangalore" }

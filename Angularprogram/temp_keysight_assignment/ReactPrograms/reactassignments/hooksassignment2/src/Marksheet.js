@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Marksheet() {
-  const [name] = useState("Srijan");
+  const [name] = useState("Yash");
   const [age] = useState(22);
 
   const [maths, setMaths] = useState(50);
